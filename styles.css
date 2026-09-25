@@ -178,8 +178,10 @@ h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); margin: 0 0 1.5rem; }
 }
 .problema-cards { display: grid; gap: 1rem; align-content: start; }
 .chart-fig img {
-  max-width: 46rem; width: 100%;
-  flex: 1; min-height: 0; object-fit: contain;
+  max-width: 100%; width: auto;
+  flex: 0 1 auto; min-height: 0;
+  max-height: 24rem; margin: auto;
+  object-fit: contain;
 }
 .chart-fig figcaption { color: var(--muted); margin-top: 1rem; }
 .chart-fig figcaption strong { color: var(--ink); }
