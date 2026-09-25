@@ -180,7 +180,7 @@ h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); margin: 0 0 1.5rem; }
 .chart-fig img {
   max-width: 100%; width: auto;
   flex: 0 1 auto; min-height: 0;
-  max-height: 24rem; margin: auto;
+  max-height: 33rem; margin: auto;
   object-fit: contain;
 }
 .chart-fig figcaption { color: var(--muted); margin-top: 1rem; }
