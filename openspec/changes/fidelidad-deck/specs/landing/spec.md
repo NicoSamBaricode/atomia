@@ -14,7 +14,14 @@ El sistema SHALL presentar la sección problema con las 3 tarjetas apiladas vert
 
 #### Scenario: Layout problema en desktop
 - **WHEN** el visitante ve la sección problema en desktop
-- **THEN** encuentra las tarjetas IA, % y CHF·CC una arriba de otra a la izquierda y el gráfico a la derecha
+- **THEN** encuentra las tarjetas IA, % y CHF·CC una arriba de otra a la izquierda y el gráfico a la derecha con la misma altura del conjunto
+
+### Requirement: Hover en todas las cards
+El sistema SHALL aplicar a todas las cards un efecto hover (elevación leve, borde teal y sombra), desactivado cuando el usuario prefiere movimiento reducido.
+
+#### Scenario: Hover fluido y accesible
+- **WHEN** el visitante pasa el cursor sobre cualquier card
+- **THEN** la card se eleva con borde teal, salvo preferencia de movimiento reducido
 
 ### Requirement: Solución como flujo en 3 pasos
 El sistema SHALL presentar la solución como flujo Input → AtomIA Toolkit → Output con flechas de progresión, conservando los sub-bloques del deck (datos experimentales, leyes físicas, código del cliente, +potencia, auditable, se integra).
