@@ -61,7 +61,7 @@ El sistema SHALL exponer enlaces funcionales de email (mailto), LinkedIn y Whats
 - **THEN** se abre el destino correspondiente (cliente de correo, perfil de LinkedIn, chat de WhatsApp)
 
 ### Requirement: SEO y accesibilidad base
-El sistema SHALL incluir título, meta description, etiquetas Open Graph, HTML semántico, contraste AA en textos y foco visible en elementos interactivos.
+El sistema SHALL incluir título, meta description, etiquetas Open Graph, `sitemap.xml`, `robots.txt`, HTML semántico, contraste AA en textos y foco visible en elementos interactivos.
 
 #### Scenario: Metadatos presentes
 - **WHEN** se inspecciona el `<head>` del documento
