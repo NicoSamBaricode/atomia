@@ -9,12 +9,12 @@ El sistema SHALL usar los assets reales de la presentación: logo en hero/header
 - **WHEN** el visitante abre la página con `assets/` completo
 - **THEN** ve el logo real de ATOMIA en header y hero, el gráfico de demanda en problema y una foto real en cada tarjeta del equipo
 
-### Requirement: Iconos del problema como en el deck
-El sistema SHALL identificar las 3 tarjetas del problema con los mismos marcadores del deck: IA (demanda), % (márgenes) y CHF·CC (potencia limitada).
+### Requirement: Problema con cards a la izquierda y gráfico a la derecha
+El sistema SHALL presentar la sección problema con las 3 tarjetas apiladas verticalmente a la izquierda y el gráfico de demanda a la derecha (apilados en móvil).
 
-#### Scenario: Marcadores visibles
-- **WHEN** el visitante revisa la sección problema
-- **THEN** cada tarjeta muestra su marcador IA, % o CHF·CC respectivamente
+#### Scenario: Layout problema en desktop
+- **WHEN** el visitante ve la sección problema en desktop
+- **THEN** encuentra las tarjetas IA, % y CHF·CC una arriba de otra a la izquierda y el gráfico a la derecha
 
 ### Requirement: Solución como flujo en 3 pasos
 El sistema SHALL presentar la solución como flujo Input → AtomIA Toolkit → Output con flechas de progresión, conservando los sub-bloques del deck (datos experimentales, leyes físicas, código del cliente, +potencia, auditable, se integra).
@@ -23,9 +23,9 @@ El sistema SHALL presentar la solución como flujo Input → AtomIA Toolkit → 
 - **WHEN** el visitante recorre la sección solución de izquierda a derecha (o de arriba abajo en móvil)
 - **THEN** percibe la secuencia 1 Input → 2 Toolkit → 3 Output con sus contenidos
 
-### Requirement: Secciones mercado y próximo paso sin cifras sensibles
-El sistema SHALL incluir la sección mercado (~420 reactores de agua, foco en 5 centrales AR/BR, proceso de negocio en 3 pasos) y la sección próximo paso (objetivo 12 meses, consolidar, fortalecer equipo, misiones comerciales) con CTA de contacto, sin mostrar US$2.5M por contrato ni US$22.5M acumulados.
+### Requirement: Sección mercado sin cifras sensibles y sin sección próximo paso
+El sistema SHALL incluir la sección mercado (~420 reactores de agua, foco en 5 centrales AR/BR, proceso de negocio en 3 pasos) y SHALL NOT incluir sección de próximo paso; el contacto final es directo (¿Nos comunicamos? + email/LinkedIn/WhatsApp), sin mostrar US$2.5M por contrato ni US$22.5M acumulados.
 
-#### Scenario: Contenido público sin finanzas
-- **WHEN** se revisa el texto de mercado y próximo paso
-- **THEN** aparecen mercado, proceso y objetivos, y no aparece ninguna cifra de facturación
+#### Scenario: Contenido público sin finanzas ni próximo paso
+- **WHEN** se revisa el texto de mercado y contacto
+- **THEN** aparecen mercado, proceso y canales de contacto, y no aparecen cifras de facturación ni objetivos de financiamiento

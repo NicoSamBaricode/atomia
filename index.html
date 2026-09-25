@@ -65,31 +65,33 @@
       <div class="container">
         <p class="eyebrow" data-i18n="problema.eyebrow">El problema</p>
         <h2 data-i18n="problema.title">Un techo invisible en cada reactor</h2>
-        <div class="cards-3">
-          <article class="card">
-            <p class="icon-chip" aria-hidden="true">IA</p>
-            <h3 data-i18n="problema.c1t">Demanda Exponencial de Energía</h3>
-            <p data-i18n="problema.c1d">Los centros de datos y la IA disparan la demanda global de energía limpia y de base ininterrumpida.</p>
-          </article>
-          <article class="card">
-            <p class="icon-chip" aria-hidden="true">%</p>
-            <h3 data-i18n="problema.c2t">Márgenes Sobredimensionados</h3>
-            <p data-i18n="problema.c2d">Centrales operando con márgenes de seguridad sobredimensionados por herramientas o métodos anacrónicos.</p>
-          </article>
-          <article class="card">
-            <p class="icon-chip" aria-hidden="true">CHF·CC</p>
-            <h3 data-i18n="problema.c3t">Potencia Limitada</h3>
-            <p data-i18n="problema.c3d">La potencia máxima generada por una central nuclear está limitada por el fenómeno de Flujo Crítico de Calor (CHF) u otras condiciones críticas.</p>
-          </article>
+        <div class="problema-grid">
+          <div class="problema-cards">
+            <article class="card">
+              <p class="icon-chip" aria-hidden="true">IA</p>
+              <h3 data-i18n="problema.c1t">Demanda Exponencial de Energía</h3>
+              <p data-i18n="problema.c1d">Los centros de datos y la IA disparan la demanda global de energía limpia y de base ininterrumpida.</p>
+            </article>
+            <article class="card">
+              <p class="icon-chip" aria-hidden="true">%</p>
+              <h3 data-i18n="problema.c2t">Márgenes Sobredimensionados</h3>
+              <p data-i18n="problema.c2d">Centrales operando con márgenes de seguridad sobredimensionados por herramientas o métodos anacrónicos.</p>
+            </article>
+            <article class="card">
+              <p class="icon-chip" aria-hidden="true">CHF·CC</p>
+              <h3 data-i18n="problema.c3t">Potencia Limitada</h3>
+              <p data-i18n="problema.c3d">La potencia máxima generada por una central nuclear está limitada por el fenómeno de Flujo Crítico de Calor (CHF) u otras condiciones críticas.</p>
+            </article>
+          </div>
+          <figure class="chart-fig">
+            <img src="assets/grafico-demanda.png" alt="Consumo de data centers vs países" loading="lazy">
+            <figcaption>
+              <strong data-i18n="problema.chartt">Demanda de Energía Eléctrica</strong><br>
+              <span data-i18n="problema.chartc">Consumo de Data Centers vs. Países</span><br>
+              <small data-i18n="problema.charts">Fuente: Bloomberg, análisis de datos BloombergNEF y DC Byte</small>
+            </figcaption>
+          </figure>
         </div>
-        <figure class="chart-fig">
-          <img src="assets/grafico-demanda.png" alt="Consumo de data centers vs países" loading="lazy">
-          <figcaption>
-            <strong data-i18n="problema.chartt">Demanda de Energía Eléctrica</strong><br>
-            <span data-i18n="problema.chartc">Consumo de Data Centers vs. Países</span><br>
-            <small data-i18n="problema.charts">Fuente: Bloomberg, análisis de datos BloombergNEF y DC Byte</small>
-          </figcaption>
-        </figure>
       </div>
     </section>
 
@@ -193,26 +195,10 @@
       </div>
     </section>
 
-    <!-- 7 · PRÓXIMO PASO + CONTACTO (slide 7) -->
+    <!-- 7 · CONTACTO -->
     <section class="section section-alt contact" id="contacto">
       <div class="container">
-        <p class="eyebrow" data-i18n="proximo.eyebrow">El próximo paso</p>
-        <h2 data-i18n="proximo.title">Objetivo a 12 meses: constituir la empresa y firmar el primer contrato</h2>
-        <div class="cards-3">
-          <article class="card">
-            <h3 data-i18n="proximo.p1t">Consolidar la empresa</h3>
-            <p data-i18n="proximo.p1d">Constituir AtomIA y dotarla de la estructura legal, administrativa y de infraestructura para operar.</p>
-          </article>
-          <article class="card">
-            <h3 data-i18n="proximo.p2t">Fortalecer el equipo</h3>
-            <p data-i18n="proximo.p2d">Reforzar capacidades comerciales y de gestión.</p>
-          </article>
-          <article class="card">
-            <h3 data-i18n="proximo.p3t">Misiones comerciales</h3>
-            <p data-i18n="proximo.p3d">Visitar al menos 7 centrales: Argentina, Brasil, Rumania y otras. Participar en eventos científicos de primera línea.</p>
-          </article>
-        </div>
-        <h3 class="contact-title" data-i18n="contacto.title">¿Nos comunicamos?</h3>
+        <h2 class="contact-title" data-i18n="contacto.title">¿Nos comunicamos?</h2>
         <p data-i18n="contacto.desc">Tomar contacto con operadores, reguladores y partners del sector nuclear.</p>
         <div class="hero-ctas">
           <a class="btn btn-primary" id="link-email" href="mailto:info@atomia.tech" data-i18n="contacto.email">Escribir por email</a>

@@ -144,6 +144,7 @@ h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); margin: 0 0 1.5rem; }
   .site-nav { display: none; }
   .flow { grid-template-columns: 1fr; }
   .flow-arrow { transform: rotate(90deg); }
+  .problema-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 520px) {
   .cards-4 { grid-template-columns: 1fr; }
@@ -160,10 +161,16 @@ h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); margin: 0 0 1.5rem; }
 }
 
 .chart-fig {
-  margin: 2rem 0 0; background: #000;
+  margin: 0; background: #000;
   border: 1px solid #232c5c; border-radius: var(--radius);
   padding: 1.25rem; text-align: center;
+  align-self: start;
 }
+.problema-grid {
+  display: grid; grid-template-columns: 1fr 1.25fr;
+  gap: 1.5rem; align-items: start;
+}
+.problema-cards { display: grid; gap: 1rem; }
 .chart-fig img { max-width: 46rem; width: 100%; height: auto; }
 .chart-fig figcaption { color: var(--muted); margin-top: 1rem; }
 .chart-fig figcaption strong { color: var(--ink); }
@@ -186,4 +193,3 @@ h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); margin: 0 0 1.5rem; }
 }
 
 .lead { color: var(--muted); font-size: 1.1rem; }
-.contact-title { margin-top: 2.5rem; }
