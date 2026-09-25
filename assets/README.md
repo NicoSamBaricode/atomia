@@ -1,10 +1,8 @@
 # assets/
 
-Subí aquí los archivos del logo de ATOMIA:
+Logos, gráfico y fotos reales extraídos de la presentación IB50K:
 
-- `logo.svg` (preferido, se usa en header y hero)
-- opcional: `logo.png` como respaldo
-
-Mientras no exista `logo.svg`, el sitio muestra un átomo SVG mínimo
-integrado en el HTML (ver `#logo-fallback` en `index.html`).
-No hace falta tocar código: al agregar `logo.svg` se usa automáticamente.
+- `logo.png` — logo completo ATOMIA (hero)
+- `logo-mark.png` — símbolo del átomo recortado (header, favicon)
+- `grafico-demanda.png` — gráfico Bloomberg data centers vs países
+- `equipo-christian.jpg` · `equipo-nicolas.jpg` · `equipo-rosendo.jpg` · `equipo-dario.jpg`

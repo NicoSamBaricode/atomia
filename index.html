@@ -9,8 +9,8 @@
   <meta property="og:description" content="Física + Machine Learning para operar centrales nucleares con más potencia y los mismos estándares de seguridad.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.atomia.tech">
-  <meta property="og:image" content="https://www.atomia.tech/assets/logo.svg">
-  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <meta property="og:image" content="https://www.atomia.tech/assets/logoAtomia.png">
+  <link rel="icon" type="image/png" href="assets/logo-mark.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,21 +19,14 @@
   <header class="site-header" id="inicio">
     <div class="container header-inner">
       <a class="brand" href="#inicio" aria-label="AtomIA inicio">
-        <!-- Si aportas assets/logo.svg se usa automáticamente; si no, se muestra el átomo SVG -->
-        <img class="brand-logo" src="assets/logo.svg" alt="AtomIA" width="40" height="40"
-             onerror="this.remove();document.getElementById('logo-fallback').hidden=false;">
-        <svg id="logo-fallback" hidden width="40" height="40" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-          <ellipse cx="24" cy="24" rx="20" ry="8" stroke="#2dd4bf" stroke-width="2"/>
-          <ellipse cx="24" cy="24" rx="20" ry="8" stroke="#2dd4bf" stroke-width="2" transform="rotate(60 24 24)"/>
-          <ellipse cx="24" cy="24" rx="20" ry="8" stroke="#ffc400" stroke-width="2" transform="rotate(120 24 24)"/>
-          <circle cx="24" cy="24" r="3.5" fill="#ffc400"/>
-        </svg>
+        <img class="brand-mark" src="assets/logo-mark.png" alt="AtomIA" width="40" height="40">
         <span class="brand-name">ATOMIA</span>
       </a>
       <nav class="site-nav" aria-label="Principal">
         <a href="#problema" data-i18n="nav.problema">Problema</a>
         <a href="#solucion" data-i18n="nav.solucion">Solución</a>
-        <a href="#validacion" data-i18n="nav.validacion">Validación</a>
+        <a href="#prueba" data-i18n="nav.prueba">Prueba</a>
+        <a href="#mercado" data-i18n="nav.mercado">Mercado</a>
         <a href="#equipo" data-i18n="nav.equipo">Equipo</a>
         <a href="#contacto" data-i18n="nav.contacto">Contacto</a>
       </nav>
@@ -45,7 +38,7 @@
   </header>
 
   <main id="contenido">
-    <!-- HERO réplica de la slide 1 -->
+    <!-- 1 · HERO (slide 1) -->
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
@@ -61,65 +54,83 @@
             <a class="btn btn-ghost" href="#solucion" data-i18n="hero.cta2">Ver la solución</a>
           </div>
         </div>
-        <div class="hero-logo" aria-hidden="true">
-          <img src="assets/logo.svg" alt="" width="280" height="280" onerror="this.remove();">
+        <div class="hero-logo">
+          <img src="assets/logoAtomia.png" alt="AtomIA Technologies" width="420" height="400">
         </div>
       </div>
     </section>
 
-    <!-- PROBLEMA -->
+    <!-- 2 · EL PROBLEMA (slide 2) -->
     <section class="section" id="problema">
       <div class="container">
         <p class="eyebrow" data-i18n="problema.eyebrow">El problema</p>
         <h2 data-i18n="problema.title">Un techo invisible en cada reactor</h2>
         <div class="cards-3">
           <article class="card">
-            <h3 data-i18n="problema.c1t">Demanda exponencial de energía</h3>
-            <p data-i18n="problema.c1d">Los centros de datos y la IA disparan la demanda global de energía limpia de base, firme e ininterrumpida.</p>
+            <p class="icon-chip" aria-hidden="true">IA</p>
+            <h3 data-i18n="problema.c1t">Demanda Exponencial de Energía</h3>
+            <p data-i18n="problema.c1d">Los centros de datos y la IA disparan la demanda global de energía limpia y de base ininterrumpida.</p>
           </article>
           <article class="card">
-            <h3 data-i18n="problema.c2t">Márgenes sobredimensionados</h3>
-            <p data-i18n="problema.c2d">Centrales operando con márgenes de seguridad sobredimensionados por herramientas y métodos anacrónicos.</p>
+            <p class="icon-chip" aria-hidden="true">%</p>
+            <h3 data-i18n="problema.c2t">Márgenes Sobredimensionados</h3>
+            <p data-i18n="problema.c2d">Centrales operando con márgenes de seguridad sobredimensionados por herramientas o métodos anacrónicos.</p>
           </article>
           <article class="card">
-            <h3 data-i18n="problema.c3t">Potencia limitada</h3>
-            <p data-i18n="problema.c3d">La potencia máxima está limitada por el fenómeno de Flujo Crítico de Calor (CHF) y otras condiciones críticas.</p>
+            <p class="icon-chip" aria-hidden="true">CHF·CC</p>
+            <h3 data-i18n="problema.c3t">Potencia Limitada</h3>
+            <p data-i18n="problema.c3d">La potencia máxima generada por una central nuclear está limitada por el fenómeno de Flujo Crítico de Calor (CHF) u otras condiciones críticas.</p>
           </article>
         </div>
+        <figure class="chart-fig">
+          <img src="assets/grafico-demanda.png" alt="Consumo de data centers vs países" loading="lazy">
+          <figcaption>
+            <strong data-i18n="problema.chartt">Demanda de Energía Eléctrica</strong><br>
+            <span data-i18n="problema.chartc">Consumo de Data Centers vs. Países</span><br>
+            <small data-i18n="problema.charts">Fuente: Bloomberg, análisis de datos BloombergNEF y DC Byte</small>
+          </figcaption>
+        </figure>
       </div>
     </section>
 
-    <!-- SOLUCIÓN -->
+    <!-- 3 · LA SOLUCIÓN (slide 3) -->
     <section class="section section-alt" id="solucion">
       <div class="container">
         <p class="eyebrow" data-i18n="solucion.eyebrow">La solución</p>
         <h2 data-i18n="solucion.title">Física y datos para aumentar la potencia</h2>
-        <div class="cards-3">
-          <article class="card card-step">
+        <div class="flow">
+          <article class="card flow-step">
             <p class="step" data-i18n="solucion.s1n">1 · Input</p>
             <h3 data-i18n="solucion.s1t">Datos del cliente</h3>
-            <p data-i18n="solucion.s1d">Datos experimentales y bases termohidráulicas y de CHF del cliente, leyes físicas y su código de cálculo aprobado por el ente regulatorio.</p>
+            <ul>
+              <li><strong data-i18n="solucion.i1t">Datos experimentales</strong><span data-i18n="solucion.i1d"> — Ensayos y bases de datos termohidráulicos y de CHF del cliente.</span></li>
+              <li><strong data-i18n="solucion.i2t">Leyes físicas</strong><span data-i18n="solucion.i2d"> — Principios que la solución debe respetar.</span></li>
+              <li><strong data-i18n="solucion.i3t">Código de cálculo termohidráulico del cliente</strong><span data-i18n="solucion.i3d"> — Aprobado por ente regulatorio.</span></li>
+            </ul>
           </article>
-          <article class="card card-step">
+          <p class="flow-arrow" aria-hidden="true">→</p>
+          <article class="card flow-step flow-core">
             <p class="step" data-i18n="solucion.s2n">2 · AtomIA Toolkit</p>
             <h3 data-i18n="solucion.s2t">Física + Machine Learning</h3>
-            <p data-i18n="solucion.s2d">Conjunto de herramientas con fundamentos físicos potenciadas por ML, ajustadas a las características de cada cliente.</p>
+            <p><strong data-i18n="solucion.t1t">Toolkit</strong><span data-i18n="solucion.t1d"> — Conjunto de herramientas basadas en fundamentos físicos potenciadas por Machine Learning.</span></p>
+            <p data-i18n="solucion.t2d">Solución ajustada a las características del cliente.</p>
           </article>
-          <article class="card card-step">
+          <p class="flow-arrow" aria-hidden="true">→</p>
+          <article class="card flow-step">
             <p class="step" data-i18n="solucion.s3n">3 · Output</p>
             <h3 data-i18n="solucion.s3t">Más potencia, misma seguridad</h3>
-            <p data-i18n="solucion.s3d">Mejor predicción de fenómenos críticos para operar con más potencia manteniendo los estándares de seguridad.</p>
+            <ul>
+              <li><strong data-i18n="solucion.o1t">+ Potencia</strong><span data-i18n="solucion.o1d"> — Una mejor predicción de fenómenos críticos permite operar con más potencia manteniendo los estándares de seguridad.</span></li>
+              <li><strong data-i18n="solucion.o2t">Auditable</strong><span data-i18n="solucion.o2d"> — Explicable para reguladores como la ARN, NRC y la ANSN.</span></li>
+              <li><strong data-i18n="solucion.o3t">Se integra</strong><span data-i18n="solucion.o3d"> — Mejora el código del cliente sin reemplazarlo.</span></li>
+            </ul>
           </article>
         </div>
-        <ul class="ticks">
-          <li data-i18n="solucion.t1">Auditable: explicable para reguladores como ARN, NRC y ANSN.</li>
-          <li data-i18n="solucion.t2">Se integra: mejora el código del cliente sin reemplazarlo.</li>
-        </ul>
       </div>
     </section>
 
-    <!-- PRUEBA ATUCHA II -->
-    <section class="section" id="validacion">
+    <!-- 4 · LA PRUEBA (slide 4) -->
+    <section class="section" id="prueba">
       <div class="container">
         <p class="eyebrow" data-i18n="prueba.eyebrow">La prueba · Atucha II</p>
         <h2 data-i18n="prueba.title">Ya validado en una central real</h2>
@@ -133,28 +144,47 @@
       </div>
     </section>
 
-    <!-- EQUIPO -->
-    <section class="section section-alt" id="equipo">
+    <!-- 5 · MERCADO (slide 5, sin cifras de facturación) -->
+    <section class="section section-alt" id="mercado">
+      <div class="container">
+        <p class="eyebrow" data-i18n="mercado.eyebrow">Mercado y negocio</p>
+        <h2><span class="claim-accent">~420</span> <span data-i18n="mercado.title">reactores de agua: nuestro mercado</span></h2>
+        <p class="lead" data-i18n="mercado.desc">Arrancamos por 5 centrales en Argentina y Brasil.</p>
+        <h3 data-i18n="mercado.proc">Proceso de negocio</h3>
+        <div class="cards-3">
+          <article class="card"><p class="step">1</p><h3 data-i18n="mercado.p1">Estudio de factibilidad</h3></article>
+          <article class="card"><p class="step">2</p><h3 data-i18n="mercado.p2">Desarrollo Core Predictivo AtomIA</h3></article>
+          <article class="card"><p class="step">3</p><h3 data-i18n="mercado.p3">Soporte de licenciamiento y mantenimiento</h3></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 · EL EQUIPO (slide 6) -->
+    <section class="section" id="equipo">
       <div class="container">
         <p class="eyebrow" data-i18n="equipo.eyebrow">El equipo</p>
         <h2 data-i18n="equipo.title">+10 años de experiencia en el área</h2>
         <div class="cards-4">
-          <article class="card">
+          <article class="card team-card">
+            <img src="assets/equipo-christian.jpg" alt="Dr. Christian Marcel" loading="lazy">
             <h3>Dr. Christian Marcel</h3>
             <p class="role">CEO / CTO</p>
             <p data-i18n="equipo.p1">Dr. Ing. Nuclear · CNEA, CONICET e Instituto Balseiro.</p>
           </article>
-          <article class="card">
+          <article class="card team-card">
+            <img src="assets/equipo-nicolas.jpg" alt="Lic. Nicolás Sammarco" loading="lazy">
             <h3>Lic. Nicolás Sammarco</h3>
             <p class="role">CBDO / CIO</p>
             <p data-i18n="equipo.p2">Datos, IT y desarrollo de negocios.</p>
           </article>
-          <article class="card">
+          <article class="card team-card">
+            <img src="assets/equipo-rosendo.jpg" alt="Ing. Rosendo Fazzari" loading="lazy">
             <h3>Ing. Rosendo Fazzari</h3>
             <p class="role">CSO</p>
-            <p data-i18n="equipo.p3">Ingeniero Nuclear · termohidráulica, modelado físico y ML.</p>
+            <p data-i18n="equipo.p3">Ingeniero Nuclear e investigador en el CAB, especializado en termohidráulica nuclear, modelado físico y Machine Learning.</p>
           </article>
-          <article class="card">
+          <article class="card team-card">
+            <img src="assets/equipo-dario.jpg" alt="Mgtr. Darío Osorio" loading="lazy">
             <h3>Mgtr. Darío Osorio</h3>
             <p class="role">CSO</p>
             <p data-i18n="equipo.p4">Simulación, validación y licenciamiento.</p>
@@ -163,10 +193,26 @@
       </div>
     </section>
 
-    <!-- CONTACTO -->
-    <section class="section contact" id="contacto">
+    <!-- 7 · PRÓXIMO PASO + CONTACTO (slide 7) -->
+    <section class="section section-alt contact" id="contacto">
       <div class="container">
-        <h2 data-i18n="contacto.title">¿Nos comunicamos?</h2>
+        <p class="eyebrow" data-i18n="proximo.eyebrow">El próximo paso</p>
+        <h2 data-i18n="proximo.title">Objetivo a 12 meses: constituir la empresa y firmar el primer contrato</h2>
+        <div class="cards-3">
+          <article class="card">
+            <h3 data-i18n="proximo.p1t">Consolidar la empresa</h3>
+            <p data-i18n="proximo.p1d">Constituir AtomIA y dotarla de la estructura legal, administrativa y de infraestructura para operar.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="proximo.p2t">Fortalecer el equipo</h3>
+            <p data-i18n="proximo.p2d">Reforzar capacidades comerciales y de gestión.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="proximo.p3t">Misiones comerciales</h3>
+            <p data-i18n="proximo.p3d">Visitar al menos 7 centrales: Argentina, Brasil, Rumania y otras. Participar en eventos científicos de primera línea.</p>
+          </article>
+        </div>
+        <h3 class="contact-title" data-i18n="contacto.title">¿Nos comunicamos?</h3>
         <p data-i18n="contacto.desc">Tomar contacto con operadores, reguladores y partners del sector nuclear.</p>
         <div class="hero-ctas">
           <a class="btn btn-primary" id="link-email" href="mailto:info@atomia.tech" data-i18n="contacto.email">Escribir por email</a>
