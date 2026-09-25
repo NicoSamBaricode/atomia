@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AtomIA · +5% de energía nuclear limpia sin modificar la planta</title>
+  <meta name="description" content="AtomIA combina Física + Machine Learning para que las centrales nucleares operen con más potencia respetando los mismos estándares de seguridad. Validado en Atucha II.">
+  <meta property="og:title" content="AtomIA · +5% de energía nuclear limpia">
+  <meta property="og:description" content="Física + Machine Learning para operar centrales nucleares con más potencia y los mismos estándares de seguridad.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.atomia.tech">
+  <meta property="og:image" content="https://www.atomia.tech/assets/logo.svg">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido" data-i18n="skip">Saltar al contenido</a>
+
+  <header class="site-header" id="inicio">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="AtomIA inicio">
+        <!-- Si aportas assets/logo.svg se usa automáticamente; si no, se muestra el átomo SVG -->
+        <img class="brand-logo" src="assets/logo.svg" alt="AtomIA" width="40" height="40"
+             onerror="this.remove();document.getElementById('logo-fallback').hidden=false;">
+        <svg id="logo-fallback" hidden width="40" height="40" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <ellipse cx="24" cy="24" rx="20" ry="8" stroke="#2dd4bf" stroke-width="2"/>
+          <ellipse cx="24" cy="24" rx="20" ry="8" stroke="#2dd4bf" stroke-width="2" transform="rotate(60 24 24)"/>
+          <ellipse cx="24" cy="24" rx="20" ry="8" stroke="#ffc400" stroke-width="2" transform="rotate(120 24 24)"/>
+          <circle cx="24" cy="24" r="3.5" fill="#ffc400"/>
+        </svg>
+        <span class="brand-name">ATOMIA</span>
+      </a>
+      <nav class="site-nav" aria-label="Principal">
+        <a href="#problema" data-i18n="nav.problema">Problema</a>
+        <a href="#solucion" data-i18n="nav.solucion">Solución</a>
+        <a href="#validacion" data-i18n="nav.validacion">Validación</a>
+        <a href="#equipo" data-i18n="nav.equipo">Equipo</a>
+        <a href="#contacto" data-i18n="nav.contacto">Contacto</a>
+      </nav>
+      <div class="lang-toggle" role="group" aria-label="Idioma / Language">
+        <button type="button" data-lang="es" aria-pressed="true">ES</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- HERO réplica de la slide 1 -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="badge" data-i18n="hero.badge">IB50K · 16ª edición</p>
+          <h1 class="hero-title">AtomIA</h1>
+          <p class="hero-claim">
+            <span class="claim-accent" data-i18n="hero.claim1">+5% de energía nuclear limpia</span><br>
+            <span data-i18n="hero.claim2">Sin modificar la planta</span>
+          </p>
+          <p class="hero-desc" data-i18n="hero.desc">Combinamos Física + Machine Learning para que las centrales nucleares operen con más potencia respetando los mismos estándares de seguridad.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="#contacto" data-i18n="hero.cta1">Contáctanos</a>
+            <a class="btn btn-ghost" href="#solucion" data-i18n="hero.cta2">Ver la solución</a>
+          </div>
+        </div>
+        <div class="hero-logo" aria-hidden="true">
+          <img src="assets/logo.svg" alt="" width="280" height="280" onerror="this.remove();">
+        </div>
+      </div>
+    </section>
+
+    <!-- PROBLEMA -->
+    <section class="section" id="problema">
+      <div class="container">
+        <p class="eyebrow" data-i18n="problema.eyebrow">El problema</p>
+        <h2 data-i18n="problema.title">Un techo invisible en cada reactor</h2>
+        <div class="cards-3">
+          <article class="card">
+            <h3 data-i18n="problema.c1t">Demanda exponencial de energía</h3>
+            <p data-i18n="problema.c1d">Los centros de datos y la IA disparan la demanda global de energía limpia de base, firme e ininterrumpida.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="problema.c2t">Márgenes sobredimensionados</h3>
+            <p data-i18n="problema.c2d">Centrales operando con márgenes de seguridad sobredimensionados por herramientas y métodos anacrónicos.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="problema.c3t">Potencia limitada</h3>
+            <p data-i18n="problema.c3d">La potencia máxima está limitada por el fenómeno de Flujo Crítico de Calor (CHF) y otras condiciones críticas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUCIÓN -->
+    <section class="section section-alt" id="solucion">
+      <div class="container">
+        <p class="eyebrow" data-i18n="solucion.eyebrow">La solución</p>
+        <h2 data-i18n="solucion.title">Física y datos para aumentar la potencia</h2>
+        <div class="cards-3">
+          <article class="card card-step">
+            <p class="step" data-i18n="solucion.s1n">1 · Input</p>
+            <h3 data-i18n="solucion.s1t">Datos del cliente</h3>
+            <p data-i18n="solucion.s1d">Datos experimentales y bases termohidráulicas y de CHF del cliente, leyes físicas y su código de cálculo aprobado por el ente regulatorio.</p>
+          </article>
+          <article class="card card-step">
+            <p class="step" data-i18n="solucion.s2n">2 · AtomIA Toolkit</p>
+            <h3 data-i18n="solucion.s2t">Física + Machine Learning</h3>
+            <p data-i18n="solucion.s2d">Conjunto de herramientas con fundamentos físicos potenciadas por ML, ajustadas a las características de cada cliente.</p>
+          </article>
+          <article class="card card-step">
+            <p class="step" data-i18n="solucion.s3n">3 · Output</p>
+            <h3 data-i18n="solucion.s3t">Más potencia, misma seguridad</h3>
+            <p data-i18n="solucion.s3d">Mejor predicción de fenómenos críticos para operar con más potencia manteniendo los estándares de seguridad.</p>
+          </article>
+        </div>
+        <ul class="ticks">
+          <li data-i18n="solucion.t1">Auditable: explicable para reguladores como ARN, NRC y ANSN.</li>
+          <li data-i18n="solucion.t2">Se integra: mejora el código del cliente sin reemplazarlo.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PRUEBA ATUCHA II -->
+    <section class="section" id="validacion">
+      <div class="container">
+        <p class="eyebrow" data-i18n="prueba.eyebrow">La prueba · Atucha II</p>
+        <h2 data-i18n="prueba.title">Ya validado en una central real</h2>
+        <div class="metrics">
+          <div class="metric"><p class="metric-value">+5%</p><p class="metric-label" data-i18n="prueba.m1">más de margen térmico verificado</p></div>
+          <div class="metric"><p class="metric-value">375.000</p><p class="metric-label" data-i18n="prueba.m2">MWh por año adicionales, potenciales</p></div>
+          <div class="metric"><p class="metric-value">US$15 M</p><p class="metric-label" data-i18n="prueba.m3">por año para la operadora (a US$40/MWh)</p></div>
+          <div class="metric"><p class="metric-value">~138 t</p><p class="metric-label" data-i18n="prueba.m4">CO₂eq/año evitadas al desplazar gas natural</p></div>
+        </div>
+        <p class="trl" data-i18n="prueba.trl">TRL 6 · demostración en entorno real</p>
+      </div>
+    </section>
+
+    <!-- EQUIPO -->
+    <section class="section section-alt" id="equipo">
+      <div class="container">
+        <p class="eyebrow" data-i18n="equipo.eyebrow">El equipo</p>
+        <h2 data-i18n="equipo.title">+10 años de experiencia en el área</h2>
+        <div class="cards-4">
+          <article class="card">
+            <h3>Dr. Christian Marcel</h3>
+            <p class="role">CEO / CTO</p>
+            <p data-i18n="equipo.p1">Dr. Ing. Nuclear · CNEA, CONICET e Instituto Balseiro.</p>
+          </article>
+          <article class="card">
+            <h3>Lic. Nicolás Sammarco</h3>
+            <p class="role">CBDO / CIO</p>
+            <p data-i18n="equipo.p2">Datos, IT y desarrollo de negocios.</p>
+          </article>
+          <article class="card">
+            <h3>Ing. Rosendo Fazzari</h3>
+            <p class="role">CSO</p>
+            <p data-i18n="equipo.p3">Ingeniero Nuclear · termohidráulica, modelado físico y ML.</p>
+          </article>
+          <article class="card">
+            <h3>Mgtr. Darío Osorio</h3>
+            <p class="role">CSO</p>
+            <p data-i18n="equipo.p4">Simulación, validación y licenciamiento.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section contact" id="contacto">
+      <div class="container">
+        <h2 data-i18n="contacto.title">¿Nos comunicamos?</h2>
+        <p data-i18n="contacto.desc">Tomar contacto con operadores, reguladores y partners del sector nuclear.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" id="link-email" href="mailto:info@atomia.tech" data-i18n="contacto.email">Escribir por email</a>
+          <a class="btn btn-ghost" id="link-linkedin" href="https://www.linkedin.com/company/atomia-tech" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn-ghost" id="link-whatsapp" href="https://wa.me/5492944000000" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p><strong>AtomIA</strong> · <a href="https://www.atomia.tech">www.atomia.tech</a> · <span data-i18n="footer.loc">Bariloche</span></p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

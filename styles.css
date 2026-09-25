@@ -1,0 +1,143 @@
+/* AtomIA — tokens fieles a la presentación IB50K */
+:root {
+  --bg-navy: #070b18;
+  --bg-navy-2: #0c1330;
+  --teal: #2dd4bf;
+  --gold: #ffc400;
+  --ink: #eef2ff;
+  --muted: #9aa4c0;
+  --card: #101736;
+  --radius: 0.75rem;
+  --maxw: 72rem;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: radial-gradient(60rem 30rem at 80% -5%, #12332f 0%, var(--bg-navy) 55%) no-repeat, var(--bg-navy);
+  color: var(--ink);
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.container { max-width: var(--maxw); margin: 0 auto; padding: 0 1.25rem; }
+
+.skip-link {
+  position: absolute; left: -999px; top: 0;
+  background: var(--teal); color: #04211d; padding: 0.5rem 1rem; z-index: 100;
+}
+.skip-link:focus { left: 0.5rem; top: 0.5rem; }
+
+a { color: var(--teal); }
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--gold); outline-offset: 2px;
+}
+
+/* Header */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(7, 11, 24, 0.92);
+  border-bottom: 1px solid #1c2447;
+  backdrop-filter: blur(6px);
+}
+.header-inner {
+  display: flex; align-items: center; gap: 1rem;
+  padding-top: 0.75rem; padding-bottom: 0.75rem;
+}
+.brand { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; color: var(--ink); }
+.brand-logo { border-radius: 50%; }
+.brand-name { font-weight: 800; letter-spacing: 0.35em; font-size: 1rem; }
+.site-nav { display: flex; gap: 1rem; margin-left: auto; }
+.site-nav a { color: var(--ink); text-decoration: none; font-size: 0.95rem; }
+.site-nav a:hover { color: var(--teal); }
+
+.lang-toggle { display: flex; border: 1px solid var(--teal); border-radius: 999px; overflow: hidden; }
+.lang-toggle button {
+  background: transparent; color: var(--ink); border: 0;
+  padding: 0.35rem 0.8rem; cursor: pointer; font-weight: 700;
+}
+.lang-toggle button[aria-pressed="true"] { background: var(--teal); color: #04211d; }
+
+/* Hero — réplica slide 1 */
+.hero { padding: 4rem 0 3.5rem; }
+.hero-grid {
+  display: grid; grid-template-columns: 1.4fr 1fr;
+  gap: 2rem; align-items: center;
+}
+.badge {
+  display: inline-block; margin: 0 0 1rem;
+  border: 1px solid var(--teal); border-radius: 999px;
+  color: var(--teal); font-weight: 700; font-size: 0.85rem;
+  padding: 0.35rem 1.1rem;
+}
+.hero-title {
+  margin: 0; color: var(--gold);
+  font-size: clamp(3.5rem, 9vw, 6.5rem);
+  line-height: 1; letter-spacing: -0.02em; font-weight: 800;
+}
+.hero-claim { font-size: clamp(1.4rem, 3.4vw, 2.2rem); line-height: 1.25; font-weight: 800; margin: 1rem 0; }
+.claim-accent { color: var(--teal); }
+.hero-desc { color: var(--muted); font-size: 1.1rem; max-width: 44rem; }
+.hero-logo { text-align: center; }
+.hero-logo img { max-width: 100%; height: auto; border-radius: 50%; }
+
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.5rem; }
+.btn {
+  display: inline-block; text-decoration: none; font-weight: 700;
+  padding: 0.7rem 1.4rem; border-radius: 999px; border: 1px solid var(--teal);
+}
+.btn-primary { background: var(--teal); color: #04211d; }
+.btn-ghost { color: var(--teal); background: transparent; }
+.btn-ghost:hover { background: rgba(45, 212, 191, 0.12); }
+
+/* Secciones */
+.section { padding: 3.5rem 0; }
+.section-alt { background: rgba(12, 19, 48, 0.6); }
+.eyebrow {
+  color: var(--teal); text-transform: uppercase; letter-spacing: 0.2em;
+  font-size: 0.8rem; font-weight: 800; margin: 0 0 0.5rem;
+}
+h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); margin: 0 0 1.5rem; }
+
+.cards-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.cards-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+.card {
+  background: var(--card); border: 1px solid #232c5c;
+  border-radius: var(--radius); padding: 1.25rem;
+}
+.card h3 { margin-top: 0; }
+.card .role { color: var(--gold); font-weight: 700; margin: 0.25rem 0; }
+.step { color: var(--teal); font-weight: 800; margin: 0 0 0.5rem; }
+
+.ticks { list-style: none; padding: 0; margin: 1.5rem 0 0; display: grid; gap: 0.5rem; }
+.ticks li::before { content: "✓ "; color: var(--teal); font-weight: 800; }
+
+.metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+.metric {
+  background: var(--card); border: 1px solid #232c5c;
+  border-radius: var(--radius); padding: 1.25rem; text-align: center;
+}
+.metric-value { color: var(--gold); font-size: 1.8rem; font-weight: 800; margin: 0; }
+.metric-label { color: var(--muted); margin: 0.5rem 0 0; }
+.trl { color: var(--teal); font-weight: 700; margin-top: 1.25rem; }
+
+.contact { text-align: left; }
+.contact .hero-ctas { justify-content: flex-start; }
+
+.site-footer { border-top: 1px solid #1c2447; padding: 1.5rem 0; color: var(--muted); }
+.footer-inner p { margin: 0; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-logo { display: none; }
+  .cards-3 { grid-template-columns: 1fr; }
+  .cards-4 { grid-template-columns: repeat(2, 1fr); }
+  .metrics { grid-template-columns: repeat(2, 1fr); }
+  .site-nav { display: none; }
+}
+@media (max-width: 520px) {
+  .cards-4 { grid-template-columns: 1fr; }
+  .metrics { grid-template-columns: 1fr; }
+}
