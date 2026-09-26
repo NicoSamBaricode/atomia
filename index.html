@@ -22,7 +22,7 @@
         <img class="brand-mark" src="assets/logo-mark.png" alt="AtomIA" width="40" height="40">
         <span class="brand-name">ATOMIA</span>
       </a>
-      <nav class="site-nav" aria-label="Principal">
+      <nav class="site-nav" id="site-nav" aria-label="Principal">
         <a href="#problema" data-i18n="nav.problema">Problema</a>
         <a href="#solucion" data-i18n="nav.solucion">Solución</a>
         <a href="#prueba" data-i18n="nav.prueba">Prueba</a>
@@ -34,6 +34,11 @@
         <button type="button" data-lang="es" aria-pressed="true">ES</button>
         <button type="button" data-lang="en" aria-pressed="false">EN</button>
       </div>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
     </div>
   </header>
 
@@ -42,7 +47,7 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="badge" data-i18n="hero.badge">IB50K · 16ª edición</p>
+          <p class="badge" data-i18n="hero.badge">Finalistas IB50K · 16ª edición</p>
           <h1 class="hero-title">AtomIA</h1>
           <p class="hero-claim">
             <span class="claim-accent" data-i18n="hero.claim1">+5% de energía nuclear limpia</span><br>
@@ -110,14 +115,14 @@
               <li><strong data-i18n="solucion.i3t">Código de cálculo termohidráulico del cliente</strong><span data-i18n="solucion.i3d"> — Aprobado por ente regulatorio.</span></li>
             </ul>
           </article>
-          <p class="flow-arrow" aria-hidden="true">→</p>
+          <div class="flow-arrow" aria-hidden="true"><span class="arrow-desktop">→</span><span class="arrow-mobile">↓</span></div>
           <article class="card flow-step flow-core">
             <p class="step" data-i18n="solucion.s2n">2 · AtomIA Toolkit</p>
             <h3 data-i18n="solucion.s2t">Física + Machine Learning</h3>
             <p><strong data-i18n="solucion.t1t">Toolkit</strong><span data-i18n="solucion.t1d"> — Conjunto de herramientas basadas en fundamentos físicos potenciadas por Machine Learning.</span></p>
             <p data-i18n="solucion.t2d">Solución ajustada a las características del cliente.</p>
           </article>
-          <p class="flow-arrow" aria-hidden="true">→</p>
+          <div class="flow-arrow" aria-hidden="true"><span class="arrow-desktop">→</span><span class="arrow-mobile">↓</span></div>
           <article class="card flow-step">
             <p class="step" data-i18n="solucion.s3n">3 · Output</p>
             <h3 data-i18n="solucion.s3t">Más potencia, misma seguridad</h3>
@@ -171,19 +176,19 @@
             <img src="assets/equipo-christian.jpg" alt="Dr. Christian Marcel" loading="lazy">
             <h3>Dr. Christian Marcel</h3>
             <p class="role">CEO / CTO</p>
-            <p data-i18n="equipo.p1">Dr. Ing. Nuclear · CNEA, CONICET e Instituto Balseiro.</p>
+            <p data-i18n="equipo.p1">Dr. Ing. Nuclear · CNEA, CONICET e Instituto Balseiro. Desarrollo de modelos, analista de datos, expertise en Termohidráulica Avanzada.</p>
           </article>
           <article class="card team-card">
             <img src="assets/equipo-nicolas.jpg" alt="Lic. Nicolás Sammarco" loading="lazy">
             <h3>Lic. Nicolás Sammarco</h3>
             <p class="role">CBDO / CIO</p>
-            <p data-i18n="equipo.p2">Datos, IT y desarrollo de negocios.</p>
+            <p data-i18n="equipo.p2">Licenciado en Informática especializado en arquitectura de software, infraestructura y desarrollo de negocios para soluciones tecnológicas complejas.</p>
           </article>
           <article class="card team-card">
             <img src="assets/equipo-rosendo.jpg" alt="Ing. Rosendo Fazzari" loading="lazy">
             <h3>Ing. Rosendo Fazzari</h3>
             <p class="role">CSO</p>
-            <p data-i18n="equipo.p3">Ingeniero Nuclear e investigador en el CAB, especializado en termohidráulica nuclear, modelado físico y Machine Learning.</p>
+            <p data-i18n="equipo.p3">Ingeniero Nuclear especializado en termohidráulica nuclear, desarrollo de modelos computacionales y aplicación de ML a problemas de ingeniería complejos.</p>
           </article>
           <article class="card team-card">
             <img src="assets/equipo-dario.jpg" alt="Mgtr. Darío Osorio" loading="lazy">
@@ -198,12 +203,31 @@
     <!-- 7 · CONTACTO -->
     <section class="section section-alt contact" id="contacto">
       <div class="container">
+        <p class="eyebrow" data-i18n="contacto.eyebrow">Contacto</p>
         <h2 class="contact-title" data-i18n="contacto.title">¿Nos comunicamos?</h2>
-        <p data-i18n="contacto.desc">Tomar contacto con operadores, reguladores y partners del sector nuclear.</p>
-        <div class="hero-ctas">
-          <a class="btn btn-primary" id="link-email" href="mailto:info@atomia.tech" data-i18n="contacto.email">Escribir por email</a>
-          <a class="btn btn-ghost" id="link-linkedin" href="https://www.linkedin.com/company/atomia-tech" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn btn-ghost" id="link-whatsapp" href="https://wa.me/5492944000000" target="_blank" rel="noopener">WhatsApp</a>
+        <p class="contact-desc" data-i18n="contacto.desc">Tomar contacto con operadores, reguladores y partners del sector nuclear.</p>
+        <div class="contact-grid">
+          <a class="card contact-card" id="link-email" href="mailto:chris.p.marcel@gmail.com">
+            <div class="contact-icon" aria-hidden="true">✉</div>
+            <div class="contact-info">
+              <span class="contact-label" data-i18n="contacto.labelEmail">Email</span>
+              <strong class="contact-value">chris.p.marcel@gmail.com</strong>
+            </div>
+          </a>
+          <a class="card contact-card" id="link-whatsapp" href="https://wa.me/5492944677124" target="_blank" rel="noopener">
+            <div class="contact-icon" aria-hidden="true">📱</div>
+            <div class="contact-info">
+              <span class="contact-label" data-i18n="contacto.labelPhone">Teléfono / WhatsApp</span>
+              <strong class="contact-value">+54 9 2944 67-7124</strong>
+            </div>
+          </a>
+          <a class="card contact-card" id="link-linkedin" href="https://www.linkedin.com/company/atomia-technologies/" target="_blank" rel="noopener">
+            <div class="contact-icon" aria-hidden="true">in</div>
+            <div class="contact-info">
+              <span class="contact-label" data-i18n="contacto.labelLinkedin">LinkedIn</span>
+              <strong class="contact-value">AtomIA Technologies</strong>
+            </div>
+          </a>
         </div>
       </div>
     </section>
@@ -212,6 +236,13 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <p><strong>AtomIA</strong> · <a href="https://www.atomia.tech">www.atomia.tech</a> · <span data-i18n="footer.loc">Bariloche</span></p>
+      <div class="footer-links">
+        <a href="mailto:chris.p.marcel@gmail.com">chris.p.marcel@gmail.com</a>
+        <span class="dot-sep">·</span>
+        <a href="https://wa.me/5492944677124" target="_blank" rel="noopener">+54 9 2944 67-7124</a>
+        <span class="dot-sep">·</span>
+        <a href="https://www.linkedin.com/company/atomia-technologies/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
     </div>
   </footer>
 

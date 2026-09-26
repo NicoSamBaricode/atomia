@@ -1,9 +1,9 @@
-/* AtomIA landing — i18n ES/EN + contacto configurable.
-   TODO(config): reemplazar los valores de CONTACT con los reales. */
+/* AtomIA landing — i18n ES/EN + contacto configurable + mobile menu. */
 var CONTACT = {
-  email: "info@atomia.tech",
-  linkedin: "https://www.linkedin.com/company/atomia-tech",
-  whatsapp: "https://wa.me/5492944000000"
+  email: "chris.p.marcel@gmail.com",
+  linkedin: "https://www.linkedin.com/company/atomia-technologies/",
+  whatsapp: "https://wa.me/5492944677124",
+  phone: "+54 9 2944 67-7124"
 };
 
 var STRINGS = {
@@ -15,7 +15,7 @@ var STRINGS = {
     "nav.mercado": "Mercado",
     "nav.equipo": "Equipo",
     "nav.contacto": "Contacto",
-    "hero.badge": "IB50K · 16ª edición",
+    "hero.badge": "Finalistas IB50K · 16ª edición",
     "hero.claim1": "+5% de energía nuclear limpia",
     "hero.claim2": "Sin modificar la planta",
     "hero.desc": "Combinamos Física + Machine Learning para que las centrales nucleares operen con más potencia respetando los mismos estándares de seguridad.",
@@ -64,9 +64,9 @@ var STRINGS = {
     "prueba.trl": "TRL 6 · demostración en entorno real",
     "equipo.eyebrow": "El equipo",
     "equipo.title": "+10 años de experiencia en el área",
-    "equipo.p1": "Dr. Ing. Nuclear · CNEA, CONICET e Instituto Balseiro.",
-    "equipo.p2": "Datos, IT y desarrollo de negocios.",
-    "equipo.p3": "Ingeniero Nuclear e investigador en el CAB, especializado en termohidráulica nuclear, modelado físico y Machine Learning. Experiencia en investigación experimental, desarrollo de modelos computacionales y aplicación de ML a problemas de ingeniería complejos.",
+    "equipo.p1": "Dr. Ing. Nuclear · CNEA, CONICET e Instituto Balseiro. Desarrollo de modelos, analista de datos, expertise en Termohidráulica Avanzada.",
+    "equipo.p2": "Licenciado en Informática especializado en arquitectura de software, infraestructura y desarrollo de negocios para soluciones tecnológicas complejas.",
+    "equipo.p3": "Ingeniero Nuclear especializado en termohidráulica nuclear, desarrollo de modelos computacionales y aplicación de ML a problemas de ingeniería complejos.",
     "mercado.eyebrow": "Mercado y negocio",
     "mercado.title": "reactores de agua: nuestro mercado",
     "mercado.desc": "Arrancamos por 5 centrales en Argentina y Brasil.",
@@ -75,9 +75,12 @@ var STRINGS = {
     "mercado.p2": "Desarrollo Core Predictivo AtomIA",
     "mercado.p3": "Soporte de licenciamiento y mantenimiento",
     "equipo.p4": "Simulación, validación y licenciamiento.",
+    "contacto.eyebrow": "Contacto",
     "contacto.title": "¿Nos comunicamos?",
     "contacto.desc": "Tomar contacto con operadores, reguladores y partners del sector nuclear.",
-    "contacto.email": "Escribir por email",
+    "contacto.labelEmail": "Email",
+    "contacto.labelPhone": "Teléfono / WhatsApp",
+    "contacto.labelLinkedin": "LinkedIn",
     "footer.loc": "Bariloche"
   },
   en: {
@@ -88,7 +91,7 @@ var STRINGS = {
     "nav.mercado": "Market",
     "nav.equipo": "Team",
     "nav.contacto": "Contact",
-    "hero.badge": "IB50K · 16th edition",
+    "hero.badge": "IB50K Finalists · 16th edition",
     "hero.claim1": "+5% clean nuclear energy",
     "hero.claim2": "Without modifying the plant",
     "hero.desc": "We combine Physics + Machine Learning so nuclear power plants operate at higher power while meeting the same safety standards.",
@@ -137,9 +140,9 @@ var STRINGS = {
     "prueba.trl": "TRL 6 · demonstration in a real environment",
     "equipo.eyebrow": "The team",
     "equipo.title": "10+ years of experience in the field",
-    "equipo.p1": "PhD Nuclear Engineer · CNEA, CONICET and Balseiro Institute.",
-    "equipo.p2": "Data, IT and business development.",
-    "equipo.p3": "Nuclear Engineer and CAB researcher, specialized in nuclear thermal-hydraulics, physical modeling and Machine Learning.",
+    "equipo.p1": "PhD Nuclear Engineer · CNEA, CONICET and Balseiro Institute. Model development, data analyst, expertise in Advanced Thermal-Hydraulics.",
+    "equipo.p2": "B.S. in Computer Science specialized in software architecture, infrastructure, and business development for complex tech solutions.",
+    "equipo.p3": "Nuclear Engineer specialized in nuclear thermal-hydraulics, computational model development, and application of ML to complex engineering problems.",
     "mercado.eyebrow": "Market & business",
     "mercado.title": "water reactors: our market",
     "mercado.desc": "Starting with 5 plants in Argentina and Brazil.",
@@ -148,9 +151,12 @@ var STRINGS = {
     "mercado.p2": "AtomIA Predictive Core development",
     "mercado.p3": "Licensing and maintenance support",
     "equipo.p4": "Simulation, validation and licensing.",
+    "contacto.eyebrow": "Contact",
     "contacto.title": "Shall we talk?",
     "contacto.desc": "Get in touch with operators, regulators and nuclear industry partners.",
-    "contacto.email": "Write by email",
+    "contacto.labelEmail": "Email",
+    "contacto.labelPhone": "Phone / WhatsApp",
+    "contacto.labelLinkedin": "LinkedIn",
     "footer.loc": "Bariloche"
   }
 };
@@ -179,12 +185,47 @@ function initContact() {
   if (wa) wa.href = CONTACT.whatsapp;
 }
 
+function initMobileNav() {
+  var navToggle = document.getElementById("nav-toggle");
+  var siteNav = document.getElementById("site-nav");
+  if (!navToggle || !siteNav) return;
+
+  function toggleMenu() {
+    var isExpanded = navToggle.getAttribute("aria-expanded") === "true";
+    navToggle.setAttribute("aria-expanded", !isExpanded);
+    siteNav.classList.toggle("is-active", !isExpanded);
+  }
+
+  function closeMenu() {
+    navToggle.setAttribute("aria-expanded", "false");
+    siteNav.classList.remove("is-active");
+  }
+
+  navToggle.addEventListener("click", function (e) {
+    e.stopPropagation();
+    toggleMenu();
+  });
+
+  var navLinks = siteNav.querySelectorAll("a");
+  for (var i = 0; i < navLinks.length; i++) {
+    navLinks[i].addEventListener("click", closeMenu);
+  }
+
+  document.addEventListener("click", function (e) {
+    if (!siteNav.contains(e.target) && !navToggle.contains(e.target)) {
+      closeMenu();
+    }
+  });
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   var saved = "es";
   try { saved = localStorage.getItem("atomia-lang") || "es"; } catch (e) {}
   if (saved !== "es" && saved !== "en") saved = "es";
   setLang(saved);
   initContact();
+  initMobileNav();
+
   var btns = document.querySelectorAll(".lang-toggle button");
   for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function () {
@@ -192,3 +233,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+

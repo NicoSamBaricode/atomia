@@ -45,20 +45,20 @@ El sistema SHALL replicar la identidad visual de la presentación IB50K: fondo n
 - **WHEN** se compara el hero con la primera slide de la presentación
 - **THEN** se reconocen el badge pill IB50K con borde teal, el título amarillo gigante, el claim teal/blanco y el fondo navy oscuro
 
-#### Scenario: Render móvil sin scroll horizontal
-- **WHEN** la página se abre a 360px de ancho
-- **THEN** todo el contenido es legible sin desplazamiento horizontal y el header colapsa la navegación
+#### Scenario: Render móvil sin scroll horizontal y tarjetas apiladas
+- **WHEN** la página se abre en un dispositivo móvil (ancho <= 900px)
+- **THEN** todo el contenido es legible sin desplazamiento horizontal, el header colapsa la navegación en un menú hamburguesa desplegable, las tarjetas de la sección "El problema" y "La solución" se muestran apiladas verticalmente al 100% de ancho, y la figura del gráfico de demanda (`.chart-fig`) se oculta para no interferir con la legibilidad.
 
 #### Scenario: Logo del cliente
 - **WHEN** existen archivos de logo en `assets/`
 - **THEN** el header y el hero usan esos archivos en lugar de un placeholder
 
 ### Requirement: Canales de contacto directo
-El sistema SHALL exponer enlaces funcionales de email (mailto), LinkedIn y WhatsApp en la sección contacto y en el footer, incluyendo la mención Bariloche y www.atomia.tech.
+El sistema SHALL exponer enlaces funcionales de email (`chris.p.marcel@gmail.com`), LinkedIn (`https://www.linkedin.com/company/atomia-technologies/`) y teléfono/WhatsApp (`+54 9 2944 67-7124`) en tarjetas en la sección contacto y en el footer, incluyendo la mención Bariloche y www.atomia.tech.
 
 #### Scenario: Contacto clicable
 - **WHEN** el visitante hace clic en email, LinkedIn o WhatsApp
-- **THEN** se abre el destino correspondiente (cliente de correo, perfil de LinkedIn, chat de WhatsApp)
+- **THEN** se abre el destino correspondiente (cliente de correo a `chris.p.marcel@gmail.com`, perfil oficial de LinkedIn de AtomIA Technologies, chat de WhatsApp al `+54 9 2944 67-7124`)
 
 ### Requirement: SEO y accesibilidad base
 El sistema SHALL incluir título, meta description, etiquetas Open Graph, `sitemap.xml`, `robots.txt`, HTML semántico, contraste AA en textos y foco visible en elementos interactivos.
