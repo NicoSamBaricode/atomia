@@ -17,19 +17,19 @@ El sistema SHALL presentar las 8 secciones institucionales (header, hero, proble
 - **WHEN** se revisa todo el texto visible de la página
 - **THEN** no aparecen cifras de facturación (US$22.5M), precio por contrato ni pedido de financiamiento
 
-### Requirement: Hero con propuesta de valor
-El sistema SHALL mostrar en el hero el badge IB50K 16ª edición, el nombre AtomIA, el claim "+5% de energía nuclear limpia / Sin modificar la planta" y la descripción de física + machine learning, más dos CTAs hacia contacto y solución.
+### Requirement: Hero con propuesta de valor y reconocimientos
+El sistema SHALL mostrar en el hero el badge "Finalistas IB50K 16ª edición" y el badge del "1º Premio Gustavo Kent a la Innovación", el nombre AtomIA, el claim "+5% de energía nuclear limpia / Sin modificar la planta" y la descripción de física + machine learning, más dos CTAs hacia contacto y solución.
 
 #### Scenario: Hero visible al cargar
 - **WHEN** el visitante abre www.atomia.tech
-- **THEN** ve el badge, el título, el claim, la descripción y ambos CTAs sin necesidad de desplazar
+- **THEN** ve los badges de reconocimientos, el título, el claim, la descripción y ambos CTAs sin necesidad de desplazar
 
-### Requirement: Prueba Atucha II con métricas verificables
-El sistema SHALL mostrar las 4 métricas de validación (>5% margen térmico, 375.000 MWh/año, US$15M/año, ~138 ton CO₂eq/año) junto a la etiqueta TRL 6 en entorno real.
+### Requirement: Prueba Atucha II y distinciones de innovación
+El sistema SHALL mostrar las 4 métricas de validación (>5% margen térmico, 375.000 MWh/año, US$15M/año, ~138 ton CO₂eq/año), la etiqueta TRL 6 en entorno real y la tarjeta de reconocimiento del "PRIMER PREMIO Gustavo Kent a la INNOVACIÓN EN INVESTIGACIÓN APLICADA por Termohidráulica de Elementos Combustibles Nucleares: desarrollo de modelos basados en IA" otorgado por FUNC y la Agencia de Innovación de Ciencia y Tecnología (Noviembre 2025).
 
-#### Scenario: Métricas visibles
+#### Scenario: Métricas y premio visibles
 - **WHEN** el visitante llega a la sección de validación
-- **THEN** encuentra las 4 métricas con sus unidades y la mención TRL 6
+- **THEN** encuentra las 4 métricas, la mención TRL 6 y la tarjeta destacada del Primer Premio Gustavo Kent con título, subtítulo del proyecto y entidades otorgantes.
 
 ### Requirement: Equipo fundador
 El sistema SHALL listar los 4 perfiles (Christian Marcel CEO/CTO, Nicolás Sammarco CBDO/CIO, Rosendo Fazzari CSO, Darío Osorio CSO) con rol y una línea de credenciales.

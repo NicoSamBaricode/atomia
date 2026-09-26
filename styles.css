@@ -66,11 +66,66 @@ a:focus-visible, button:focus-visible {
   display: grid; grid-template-columns: 1.4fr 1fr;
   gap: 2rem; align-items: center;
 }
+.badges-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
 .badge {
-  display: inline-block; margin: 0 0 1rem;
+  display: inline-block; margin: 0;
   border: 1px solid var(--teal); border-radius: 999px;
   color: var(--teal); font-weight: 700; font-size: 0.85rem;
   padding: 0.35rem 1.1rem;
+}
+.badge-gold {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(255, 196, 0, 0.08);
+}
+
+.award-block {
+  margin-top: 2rem;
+  border: 1px solid rgba(255, 196, 0, 0.35);
+  background: linear-gradient(135deg, rgba(16, 23, 54, 0.9) 0%, rgba(25, 34, 76, 0.7) 100%);
+  padding: 1.5rem;
+  text-align: left;
+}
+.award-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+.gold-chip {
+  background: rgba(255, 196, 0, 0.12);
+  border-color: var(--gold);
+  color: var(--gold);
+  margin: 0;
+}
+.award-date {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.award-title {
+  color: var(--gold);
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem;
+  line-height: 1.3;
+}
+.award-subtitle {
+  color: var(--ink);
+  font-style: italic;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+}
+.award-org {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0;
 }
 .hero-title {
   margin: 0; color: var(--gold);
@@ -333,6 +388,7 @@ h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); margin: 0 0 1.5rem; }
 
   .hero-grid { grid-template-columns: 1fr; text-align: center; }
   .hero-copy { display: flex; flex-direction: column; align-items: center; }
+  .badges-group { justify-content: center; }
   .hero-desc { margin-left: auto; margin-right: auto; }
   .hero-ctas { justify-content: center; width: 100%; }
   .hero-logo img { max-width: 11rem; width: 100%; }
